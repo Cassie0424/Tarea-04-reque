@@ -73,6 +73,9 @@ public class Main {
         } catch (Exception e) {
             fallo("Excepción inesperada: " + e.getMessage());
         }
+        // ── PRUEBA 4 ──────────────────────────────────────────────────────────
+        encabezado(4, "Simulación del Temporizador - Notificación de vencimiento");
+        gestor.verificarVencimientos();
 
     }
 
