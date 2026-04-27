@@ -38,4 +38,10 @@ public class App {
      public void desplegarReporteDiario() {
         System.out.println("Reporte diario desplegado correctamente.");
     }
+     public void mostrarAlerta(String mensaje) {
+    System.out.println("\n╔══════════════════════════════╗");
+    System.out.println("║     !!!!!ALERTA AL USUARIO !!!!       ║");
+    System.out.println("║  " + mensaje);
+    System.out.println("╚══════════════════════════════╝");
+}
 }
