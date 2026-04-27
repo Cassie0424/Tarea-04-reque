@@ -80,7 +80,29 @@ public class GestorDeCobro {
     public void consultarPagos(){}
     
     public void solicitarDatos(){}
-    
+    // La llmada que hace e temporizador
+    public void verificarVencimientos() {
+        System.out.println("\n[Temporizador] verificarVencimientos()");
+
+        String idEstacionamiento = "EST-001";
+        Estacionamiento estacionamiento = new Estacionamiento();
+
+        int tiempoRestante = estacionamiento.obtenerTiempoRestante(idEstacionamiento);
+        System.out.println("Tiempo restante: " + tiempoRestante + " minutos");
+
+        if (tiempoRestante <= 5) {
+            String infoUsuario = estacionamiento.solicitarDatosUsuario(idEstacionamiento);
+            String mensaje = "¡¡¡¡Su tiempo vence en " + tiempoRestante + " minutos!!!!!";
+            enviarNotificacion(infoUsuario, mensaje);
+    }
+}
+
+// Enviarnotificacion
+    public void enviarNotificacion(String infoUsuario, String mensaje) {
+        System.out.println("Enviando notificación a: " + infoUsuario);
+        App app = new App(this);
+        app.mostrarAlerta(mensaje);
+}
     
     
 }
