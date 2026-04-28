@@ -76,4 +76,9 @@ public class DetalleDeCobro {
             fechaHora, parquimetroId, minutosEstacionado
         );
     }
+    
+    public void generarDetalle(LocalDateTime horaLlegada){
+        System.out.println("Detalle de cobro");
+        System.out.println("Hora de llegada: " + horaLlegada);
+    }
 }

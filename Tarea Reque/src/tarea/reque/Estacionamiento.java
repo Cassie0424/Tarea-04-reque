@@ -1,5 +1,7 @@
 package tarea.reque;
 
+import java.time.LocalDateTime;
+
 public class Estacionamiento {
 
     private String idEstacionamiento;
@@ -12,11 +14,21 @@ public class Estacionamiento {
         this.tiempoRestanteMinutos = 5;
     }
 
-    public boolean verificarDisponibilidad() {
-        return true;
+    public boolean verificarDisponibilidad(int espacio) {
+        
+        boolean disponible = true;
+        
+        return disponible;
     }
 
-    public void registrarHora(String tipo) {}
+    public LocalDateTime registrarHoraDeLlegada() {
+
+        LocalDateTime horaLlegada = LocalDateTime.now();
+
+        System.out.println("Hora de llegada registrada: " + horaLlegada);
+
+        return horaLlegada;
+    }
 
     public void consultarEstacionamiento() {}
 

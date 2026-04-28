@@ -16,4 +16,13 @@ public class SensorParqueo {
         GestorDeCobro gestor = new GestorDeCobro();
         gestor.verificarVencimientos();
     }
+    
+    public boolean detectarOcupación(){
+    
+        boolean ocupado = false;
+        
+        return ocupado;   
+    }
+    
+    
 }
