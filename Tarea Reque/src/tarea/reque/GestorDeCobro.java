@@ -102,7 +102,9 @@ public class GestorDeCobro {
         System.out.println("Enviando notificación a: " + infoUsuario);
         App app = new App(this);
         app.mostrarAlerta(mensaje);
-}
+    }
+    
+    
     
     
 }

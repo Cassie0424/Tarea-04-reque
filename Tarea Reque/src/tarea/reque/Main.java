@@ -29,7 +29,6 @@ public class Main {
         datos.add(new DetalleDeCobro("TXN-005", "CLI-100", DetalleDeCobro.TARJETA_CREDITO, 2000.0, t.minusDays(1),"PQ-OESTE-07",   40));
 
         GestorDeCobro gestor = new GestorDeCobro(datos);
-        App app = new App(gestor);
 
         // ── PRUEBA 1 ──────────────────────────────────────────────────────────
         encabezado(1, "Cliente con pagos en tarjeta de crédito hoy (CLI-100)");
@@ -77,6 +76,12 @@ public class Main {
         encabezado(4, "Simulación del Temporizador - Notificación de vencimiento");
         gestor.verificarVencimientos();
 
+        //H1: Estacionar vehiculo
+        App app = new App();
+        
+        app.estacionar();
+        
+        
     }
 
     // ── Utilidades de salida ──────────────────────────────────────────────────
